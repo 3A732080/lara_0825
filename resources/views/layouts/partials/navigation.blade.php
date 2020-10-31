@@ -8,16 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.blade.php">Home</a>
+                    <a href="{{route('posts.index')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../about.html">About</a>
+                    <a href="{{route('posts.show')}}">post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../post.html">Sample Post</a>
+                    <a href="{{route('posts.about')}}">about</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../contact.html">Contact</a>
+                    <a href="{{route('posts.contact')}}">contact</a>
                 </li>
             </ul>
         </div>
