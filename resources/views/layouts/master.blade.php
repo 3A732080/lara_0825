@@ -11,11 +11,11 @@
   <title>@yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('../css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Theme CSS -->
-    <link href="{{asset('css/clean-blog.min.css')}}" rel="stylesheet">
+    <link href="{{asset('../css/clean-blog.min.css')}}" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('../css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -36,14 +36,14 @@
   @include('layouts.partials.footer')
 
   <!-- jQuery -->
-  <script src="{{asset('js/jquery.min.js')}}"></script>
+  <script src="{{asset('../js/jquery.min.js')}}"></script>
   <!-- Bootstrap Core JavaScript -->
-  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('../js/bootstrap.min.js')}}"></script>
   <!-- Contact Form JavaScript -->
-  <script src="{{asset('js/jqBootstrapValidation.js')}}"></script>
-  <script src="{{asset('js/contact_me.js')}}"></script>
+  <script src="{{asset('../js/jqBootstrapValidation.js')}}"></script>
+  <script src="{{asset('../js/contact_me.js')}}"></script>
   <!-- Theme JavaScript -->
-  <script src="{{asset('js/clean-blog.min.js')}}"></script>
+  <script src="{{asset('../js/clean-blog.min.js')}}"></script>
 </body>
 
 </html>

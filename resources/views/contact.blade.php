@@ -2,7 +2,7 @@
 @section('title', 'Clean Blog - Contact')
 @section('content')
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url({{ URL::asset('../public/img/contact-bg.jpg') }})">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
