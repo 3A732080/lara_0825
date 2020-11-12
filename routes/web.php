@@ -22,10 +22,16 @@ Route::get('/', function () {
 //        'content' => 'test content',
 //    ]);
 
-    $post = new Post();
-    $post->title='testtitle';
-    $post->content='testcontent';
-    $post->save();
+//    $post = new Post();
+//    $post->title='test title';
+//    $post->content='testcontent';
+//    $post->save();
+
+    $posts= Post::all();
+    dd($posts);
+
+    /*$post = Post::find(1);
+    dd($post);*/
 });
 Route::get('posts', ['as' => 'posts.index', 'uses' =>
     'PostsController@index']);
