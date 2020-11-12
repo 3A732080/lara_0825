@@ -27,11 +27,11 @@ Route::get('/', function () {
 //    $post->content='testcontent';
 //    $post->save();
 
-    $posts= Post::all();
-    dd($posts);
+    /*$posts= Post::all();
+    dd($posts);*/
 
-    /*$post = Post::find(1);
-    dd($post);*/
+    $post = Post::find(1);
+    dd($post);
 });
 Route::get('posts', ['as' => 'posts.index', 'uses' =>
     'PostsController@index']);
