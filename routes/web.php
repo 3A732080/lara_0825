@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('index');
+    //return view('index');
+//    Post::create([
+//        'title' => 'test title',
+//        'content' => 'test content',
+//    ]);
+
+    $post = new Post();
+    $post->title='testtitle';
+    $post->content='testcontent';
+    $post->save();
 });
 Route::get('posts', ['as' => 'posts.index', 'uses' =>
     'PostsController@index']);
