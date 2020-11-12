@@ -46,10 +46,13 @@ Route::get('/', function () {
         'content'=>'updated content',
     ]);*/
 
-    $post=Post::find(1);
+    /*$post=Post::find(1);
     $post->title='savedtitle';
     $post->content='savedcontent';
-    $post->save();
+    $post->save();*/
+
+    $post=Post::find(1);
+    $post->delete();
 });
 Route::get('posts', ['as' => 'posts.index', 'uses' =>
     'PostsController@index']);
