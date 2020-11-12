@@ -27,20 +27,29 @@ Route::get('/', function () {
 //    $post->content='testcontent';
 //    $post->save();
 
+    //查詢資料(all)
     /*$posts= Post::all();
     dd($posts);*/
 
+    //查詢資料(單一條件)
     /*$post = Post::find(1);
     dd($post);*/
 
+    //查詢資料(設條件)
     /*$posts=Post::where('id','<',10)->orderBy('id','DESC')->get();
     dd($posts);*/
 
-    $post=Post::find(1);
+    //更新資料(update)
+    /*$post=Post::find(1);
     $post->update([
         'title'=>'updated title',
         'content'=>'updated content',
-    ]);
+    ]);*/
+
+    $post=Post::find(1);
+    $post->title='savedtitle';
+    $post->content='savedcontent';
+    $post->save();
 });
 Route::get('posts', ['as' => 'posts.index', 'uses' =>
     'PostsController@index']);
