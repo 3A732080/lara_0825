@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,13 +60,20 @@ Route::get('/', function () {
     //刪除資料(destory)
     //Post::destroy(2);
 
-    Post::destroy(3,5,7);
+    //Post::destroy(3,5,7);
+
+    $allPosts=Post::all();
+    dd($allPosts);
+
+    $featuredPosts=Post::where('is_feature',1)->get();
+    dd($featuredPosts);
 });
-Route::get('posts', ['as' => 'posts.index', 'uses' =>
-    'PostsController@index']);
-Route::get('post', ['as' => 'posts.show', 'uses' => 'PostsController@show']);
-Route::get('about', ['as' => 'posts.about', 'uses' =>
-    'PostsController@about']);
-Route::get('contact', ['as' => 'posts.contact', 'uses' =>
-    'PostsController@contact']);
+
+Route::get('index',[PostsController::class,'index'])->name('posts.index');
+
+Route::get('post',[PostsController::class,'show'])->name('posts.show');
+
+Route::get('about',[PostsController::class,'about'])->name('posts.about');
+
+Route::get('contact',[PostsController::class,'contact'])->name('posts.contact');
 
