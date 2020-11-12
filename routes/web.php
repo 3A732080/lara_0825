@@ -56,7 +56,10 @@ Route::get('/', function () {
     /*$post=Post::find(1);
     $post->delete();*/
 
-    Post::destroy(2);
+    //刪除資料(destory)
+    //Post::destroy(2);
+
+    Post::destroy(3,5,7);
 });
 Route::get('posts', ['as' => 'posts.index', 'uses' =>
     'PostsController@index']);
